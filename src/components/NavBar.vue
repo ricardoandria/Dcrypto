@@ -10,16 +10,16 @@
             <a href="">Features</a>
           </li>
           <li>
-            <a href="">Features</a>
+            <a href="#account">Market</a>
           </li>
           <li>
-            <a href="">Features</a>
+            <a href="">About Us</a>
           </li>
           <li>
-            <a href="">Features</a>
+            <a href="">Analytics</a>
           </li>
           <li>
-            <a href="">Features</a>
+            <a href="">Docs</a>
           </li>
           <div class="btn_log">
             <button>Log In</button>

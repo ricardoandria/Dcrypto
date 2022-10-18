@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="account">
     <div class="account_container">
       <div class="account_header">
         <h1>Account Types</h1>
@@ -26,13 +26,12 @@
             </div>
           </div>
           <div class="card_account">
-            <span class="profile">IBA</span>
+            <span class="profile">IRA</span>
             <div class="card_right">
-              <h2 class="name">Individual Brokerage Account</h2>
+              <h2 class="name">IRA</h2>
               <p class="card_details">
-                Individual Brokerage Account Individual brokerage account is the
-                general account which allows you to buy and sell securities and
-                assets
+                Save for retirement with Ethereal Traditional, <br />
+                Roth or Rollover IRA
               </p>
 
               <span class="btn">More</span>
@@ -53,11 +52,13 @@ export default {};
   .account_container {
     width: 80%;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
     .account_header {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
       h1 {
         color: #361818;
         font-size: 40px;
@@ -72,81 +73,74 @@ export default {};
         text-align: center;
       }
     }
-  }
-  .account_content {
-    display: flex;
-    margin-top: 100px;
-    width: 100%;
-    @media (max-width: 991px) {
+    .account_content {
+      display: flex;
+      width: 100%;
+      margin-top: 50px;
+      gap: 30px;
+
       .account_img {
-        display: none;
+        width: 40%;
+        text-align: end;
+        img {
+          width: 70%;
+        }
       }
       .desc_account {
-        width: 100% !important;
-      }
-    }
-    @media (max-width: 600px) {
-      .desc_account {
-        width: 100% !important;
-      }
-      .card_details {
-        max-width: 300px;
-      }
-      .name {
-        width: fit-content;
-      }
-    }
-    .account_img {
-      width: 50%;
-      text-align: end;
-
-      img {
-        width: 100%;
-        padding: 0;
-      }
-    }
-    .desc_account {
-      width: 50%;
-
-      .card_account {
+        width: 60%;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        gap: 10px;
-        margin-bottom: 20px;
-        cursor: pointer;
-        transition: ease-in 0.5s;
-        padding: 5px;
-        border-radius: 15px;
-        &:hover {
-          box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-        }
-        .profile {
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background: #2919e2;
+        .card_account {
           display: flex;
-          align-items: center;
           justify-content: center;
-          color: white;
-          font-weight: 600;
-        }
-        .card_right {
-          width: 445px;
-
-          .name {
-            margin-bottom: 20px;
+          gap: 20px;
+          padding: 10px;
+          margin-bottom: 50px;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+          position: relative;
+          &:hover {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           }
-          p {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 30px;
+          @media (max-width: 1000px) {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+              rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
           }
-          .btn {
-            color: #2919e2;
-            font-weight: 600;
+          .profile {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+              rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 1000px) {
+              position: absolute;
+              top: -25px;
+              right: -10px;
+              background-color: #6737c1;
+              color: white;
+            }
+          }
+          .card_right {
+            .name {
+              padding: 0;
+              margin-bottom: 5px;
+            }
+            .card_details {
+              font-weight: 700;
+              margin-bottom: 30px;
+              font-size: 1.2rem;
+            }
+            .btn {
+              color: #263aa5;
+              font-weight: 700;
+            }
           }
         }
       }

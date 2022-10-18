@@ -58,6 +58,20 @@ export default {};
       }
     }
   }
+  @media (max-width: 550px) {
+    flex-direction: column;
+    justify-content: center;
+    .footer_item {
+      text-align: center;
+    }
+    .contact {
+      text-align: center;
+
+      .social_container {
+        justify-content: center;
+      }
+    }
+  }
   .footer_item {
     margin-bottom: 20px;
     h2 {
